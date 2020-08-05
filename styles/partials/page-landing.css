@@ -1,8 +1,4 @@
 /*pagina inicial */
-:root {
-    font-size: 40%;   /*modificar rm*/
-}
-
 
 #page-landing {
    background: var(--color-primary);
@@ -73,3 +69,65 @@
 .buttons-container a.give-classes:hover{
     background: var(--color-secondary-dark);
 }
+
+.total-connections{
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.total-connections img{
+    margin-left: 0.8 rem;
+}
+
+@media (max-width:699px){
+        :root{
+            font-size:40%;
+        }
+}
+@media (min-width:1100px){
+    #page-landing #container{
+        max-width: 1100px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 350px 1fr;
+        grid-template-areas: 
+        "proffy image image"
+        "button button texting";
+        column-gap: 87px;
+        row-gap: 86px;
+    }
+    .logo-container{
+        grid-area: proffy;
+        text-align: initial;
+        align-self: center;
+        margin: 0;
+    
+    }
+   .logo-container img{
+       height: 127px;
+   }
+    .hero-image{
+        grid-area: image;
+        height: 350px;
+    }
+    .total-connections{
+        grid-area: texting;
+        justify-self: end;
+        font-size: 1.2rem;
+    }
+    .buttons-container{
+        grid-area: button;
+        justify-content: flex-start;
+        margin:0;
+    }
+}
+
+@media (min-width: 700px){
+    :root{
+        font-size: 50.5%;
+    }
+}
+
+
